@@ -158,14 +158,14 @@ function restoreState() {
 
 function main() {
     alert("main worked");
-    if (!isFoldablePage()) {
+    /*if (!isFoldablePage()) {
 	if (document.getElementById('expand-all')) {
 	    document.getElementById('expand-all').classList.add('hidden');
 	    document.getElementById('collapse-all').classList.add('hidden');
 	}
 	[].forEach.call(allCollapsibleUls, elt => toLi(elt).classList.add('li-folder-open'));
 	return;
-    }
+    }*/
 
     [].forEach.call(allCollapsibleUls, setupLink);
     window.addEventListener('beforeunload', saveState);
