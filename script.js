@@ -169,6 +169,7 @@ function main() {
 
     [].forEach.call(allCollapsibleUls, setupLink);
     window.addEventListener('beforeunload', saveState);
+    alert("Button search started")
     if (document.getElementById("expand-all")) {
     alert("Button found");
 	document.getElementById("expand-all").addEventListener("click", showAll);
