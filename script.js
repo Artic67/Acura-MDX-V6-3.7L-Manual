@@ -157,6 +157,7 @@ function restoreState() {
 }
 
 function main() {
+    alert("main worked");
     if (!isFoldablePage()) {
 	if (document.getElementById('expand-all')) {
 	    document.getElementById('expand-all').classList.add('hidden');
@@ -169,6 +170,7 @@ function main() {
     [].forEach.call(allCollapsibleUls, setupLink);
     window.addEventListener('beforeunload', saveState);
     if (document.getElementById("expand-all")) {
+    alert("Button found");
 	document.getElementById("expand-all").addEventListener("click", showAll);
 	document.getElementById("collapse-all").addEventListener("click", hideAll);
     }
@@ -196,4 +198,5 @@ function main() {
     foldingStateChanged = false;
 }
 
+alert("script worked");
 main();
